@@ -1,7 +1,11 @@
 with open("log.txt") as f:
-    content = f.read()
-if "python" in content:
-    print("yes, python is in the para")
+    contents = f.readlines()
+lineno = 1
+for content in contents:
+    if "python" in content:
+        print("yes, python is in the line : {lineno}")
+        break
+    lineno +=1
 else:
     print("No,python is not in the para")
     
